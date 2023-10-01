@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
 	public workInfos: any = [];
 	public educationInfos: any = [];
+	public skillInfos: any = [];
 
 	constructor() { }
 
@@ -123,5 +124,163 @@ export class AppComponent implements OnInit {
 			}
 		]
 
+		this.skillInfos = [
+			{
+				category: 'Technical Skills',
+				skills: [
+					{
+						name: 'Backend',
+						rating: this.barSlice(70)
+					},
+					{
+						name: 'API',
+						rating: this.barSlice(80)
+					},
+					{
+						name: 'Frontend',
+						rating: this.barSlice(70)
+					},
+					{
+						name: 'Programming Language',
+						rating: this.barSlice(0),
+						subSkills: [
+							{
+								name: 'C#',
+								rating: this.barSlice(70),
+								textRating: this.textRating(60)
+							},
+							{
+								name: 'Javascript',
+								rating: this.barSlice(85),
+								textRating: this.textRating(85)
+							},
+							{
+								name: 'SQL (MSSQL, MySQL, PostgresSQL)',
+								rating: this.barSlice(90),
+								textRating: this.textRating(90)
+							},
+							{
+								name: 'NoSQL (MonggoDB, Redis)',
+								rating: this.barSlice(40),
+								textRating: this.textRating(30)
+							},
+							{
+								name: 'Python',
+								rating: this.barSlice(60),
+								textRating: this.textRating(60)
+							},
+							{
+								name: 'HTML',
+								rating: this.barSlice(80),
+								textRating: this.textRating(80)
+							},
+							{
+								name: 'CSS',
+								rating: this.barSlice(50),
+								textRating: this.textRating(50)
+							},
+							{
+								name: 'PHP',
+								rating: this.barSlice(30),
+								textRating: this.textRating(30)
+							},
+							{
+								name: 'Java',
+								rating: this.barSlice(50),
+								textRating: this.textRating(50)
+							},
+							{
+								name: 'Dart',
+								rating: this.barSlice(60),
+								textRating: this.textRating(30)
+							},
+						]
+					},
+					{
+						name: 'Framework',
+						rating: this.barSlice(0),
+						subSkills: [
+							{
+								name: `.Net`,
+								rating: this.barSlice(60),
+								textRating: this.textRating(60)
+							},
+							{
+								name: `Entity Framework`,
+								rating: this.barSlice(50),
+								textRating: this.textRating(60)
+							},
+							{
+								name: `Angular`,
+								rating: this.barSlice(70),
+								textRating: this.textRating(70)
+							},
+							{
+								name: `FastAPI`,
+								rating: this.barSlice(60),
+								textRating: this.textRating(60)
+							},
+						]
+					},
+					{
+						name: 'Multimedia Editor'
+					}
+				]
+			},
+			{
+				category: 'General Skills',
+				skills: [
+					{
+						name: 'Communication',
+						rating: this.barSlice(80)
+					},
+					{
+						name: 'Teamwork',
+						rating: this.barSlice(80)
+					},
+					{
+						name: 'Problem solving',
+						rating: this.barSlice(80)
+					},
+					{
+						name: 'Time management',
+						rating: this.barSlice(80)
+					},
+					{
+						name: 'Resilency',
+						rating: this.barSlice(80)
+					},
+					{
+						name: 'Eagerness to learn',
+						rating: this.barSlice(90)
+					},
+				]
+			}
+		]
+	}
+
+	private barSlice(num: number): string {
+		if (num <= 0 || num > 100) return ''
+
+		const solid = Math.round((num / 100) * 10);
+		const sharp = 10 - solid;
+
+		let solidRender = '';
+		let sharpRender = '';
+		for (let i = 0; i < solid; i++) solidRender += '█';
+		for (let i = 0; i < sharp; i++) sharpRender += '#';
+
+		return `[${solidRender.concat(sharpRender)}]` 
+	}
+
+	private textRating(num: number): string {
+		if (num <= 0 || num > 100) return ''
+
+		if (num > 0 && num <= 34) return 'Basic'
+		if (num > 35 && num <= 67) return 'Itermediate'
+		if (num > 68 && num <= 100) return 'Advance'
+
+		return ''
 	}
 }
+

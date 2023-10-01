@@ -1,0 +1,38 @@
+<ng-container *ngFor="let skillInfo of data;">
+	<div class="pure-g">
+		<div class="pure-u-24-24" style="margin-top: 24px;">
+			<span style="display: block;">{{ skillInfo.category }}</span>
+			<span *ngFor="let i of skillInfo.category.split('')">-</span>
+			<div *ngIf="skillInfo?.skills" style="display: block;">
+				<ng-container *ngFor="let skill of skillInfo.skills">
+					<div class="pure-g" style="margin: 5px 0px;">
+						<div class="pure-u-1-3">
+							<span class="txt-orange">{{ skill.name }}</span>
+						</div>
+						<div class="pure-u-2-3" *ngIf="skill.rating">
+							<span>: {{ skill.rating }}</span>
+						</div>
+					</div>
+					<ng-container *ngIf="skill?.subSkills">
+						<div class="txt-gold" style="margin-left: 24px;">
+							<ng-container *ngFor="let subSkill of skill.subSkills;">
+								<div class="pure-g" style="margin:5px 0px;">
+									<div class="pure-u-1-3">
+										<span class="txt-orange">{{ subSkill.name }}</span>
+									</div>
+									<div class="pure-u-1-3">
+										<span>{{ subSkill.textRating }}</span>
+									</div>
+									<div class="pure-u-1-3">
+										<span>{{ subSkill.rating }}</span>
+									</div>
+								</div>
+							</ng-container>
+						</div>
+					</ng-container>
+				</ng-container>
+			</div>
+		</div>
+	</div>
+	
+</ng-container>

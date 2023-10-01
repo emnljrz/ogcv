@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SectionComponent } from './section/section.component';
 import { WorkInfoComponent } from './work-info/work-info.component';
 import { EducationInfoComponent } from './education-info/education-info.component';
+import { SkillsInfoComponent } from './skills-info/skills-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SectionComponent,
     WorkInfoComponent,
-    EducationInfoComponent
+    EducationInfoComponent,
+    SkillsInfoComponent
   ],
   imports: [
     BrowserModule,
