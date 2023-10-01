@@ -5,6 +5,19 @@ body {
 	font-family: 'Source Code Pro';
 }
 
+p {
+  display: block;
+  
+  span {
+    display: block;
+  }
+}
+
+.pipe-spacer {
+	padding: 0px 5px;
+}
+
+
 .txt-gold {
 	color: #f9de99;
 }

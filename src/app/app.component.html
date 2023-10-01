@@ -4,90 +4,47 @@
 		<span>$</span>
 		<span class="txt-gold"> curl</span>	
 		<span class="txt-gray"> -L </span>
-		<span class="txt-white">linkedin.com/in/emnljrz</span>
+		<span class="txt-white">
+			<a 
+				href="https://linkedin.com/in/emjrz" 
+				target="_blank" 
+				class="txt-white"
+			>linkedin.com/in/emjrz</a>
+		</span>
 	</div>
 	<app-section [title]="'Emmanuel B. Jerez'"></app-section>
 	
-	
-	<div class="pure-g">☕ Fullstack Developer</div>
+	<div>
 	<div class="pure-g">
-		<p class="txt-purple">	
-			<span>&lt;emnljrz@gmail.com&gt;</span>
-			<span> • </span>
-			<span>emjrz.github.io</span>
-		</p>
+		<div class="pure-u-24-24" style="text-align: center; padding: 12px 0px;">☕ Fullstack Developer | ⚡Tech Enthusiast</div>
 	</div>
 	<div class="pure-g">
-		<p class="txt-blue">
-			Professional information technology with more than 7 years of working
+		<div class="pure-u-24-24 txt-purple" style="text-align: center;">	
+			<span>
+				&lt;<a href="mailto:emnljrz@gmail.com" class="txt-purple">emnljrz@gmail.com</a>&gt;
+			</span>
+			<span> • </span>
+			<span>emjrz.github.io</span>
+		</div>
+	</div>
+</div>
+	<div class="pure-g">
+		<p class="pure-u-24-24 txt-blue" style="text-align: center;">
+			Professional IT with more than 7 years of working
 experience, primarily in software development, both desktop applications and web applications, with strong experience in building and maintaining RESTful APIs. 
 I am also experienced in Databases, SQL and NoSQL.
 		</p>
 	</div>
 	<app-section [title]="'Experience'"></app-section>
-	<div class="pure-g">
-		<p>
-			<span class="txt-gold">Cloudstaff Inc.</span>
-			<span class="txt-gray"> | </span>
-			<span class="txt-purple">Philippines</span>
-			<span class="txt-gray"> | </span>
-			<span>Feb '22 - Present</span>
-		</p>
-	</div>
-	<div class="pure-g">
-		<span class="txt-orange" style="padding-left: 24px;">Software Engineer II</span>
-	</div>
-	<div class="pure-g">
-		<p style="display: block;">
-			<span class="txt-blue" style="padding-left: 24px;">
-				Work includes JOBS (Cloudstaff's job portal) & Cloudstaff's internal systems.
-			</span>
-		</p>
-		<span class="txt-blue" style="padding-left: 24px;">
-			Analyzing and modifying existing software as well as designing, implementing and integrating new technology, constructing and testing end-user applications that meet user needs.
-		</span>
-	</div>
+	<app-work-info [data]="workInfos"></app-work-info>
+
+
 	<div style="margin: 12px 0;">
 		<app-section [title]="'Education'"></app-section>
-		<!-- Masters Degree -->
-		<div class="pure-g">
-			<p>
-				<span class="txt-gold">Masters in Information Technology</span>
-				<span class="txt-gray"> | </span>
-				<span class="txt-purple">Notre Dame of Dadiangas University</span>
-				<span class="txt-gray"> | </span>
-				<span>June '19 - May '23</span>
-			</p>
-		</div>
-		<div class="pure-g">
-			<span class="txt-orange" style="padding-left: 24px;">Capstone project</span>
-			<span class="txt-gray" style="margin: 0px 5px;"> • </span>
-			<span class="txt-blue">Radio Frequency Identification for Self-Service Point of Sale Kiosk</span>
-		</div>
-		<div class="pure-g">
-			<p>
-				<span class="txt-blue" style="padding-left: 24px; display: block;">
-					Prototype project involving integration of hardware (microprocessor, rfid tag, and rfid reader) and software (mobile dashboard, API, and Database).
-				</span>
-			</p>
-		</div>
-
-		<!-- Bachelor's Degree -->
-		<div class="pure-g">
-			<p>
-				<span class="txt-gold">Bachelor of Science in Information Technology</span>
-				<span class="txt-gray"> | </span>
-				<span class="txt-purple">STI College - General Santos City</span>
-				<span class="txt-gray"> | </span>
-				<span>June '09 - March '13</span>
-			</p>
-		</div>
-		<div class="pure-g">
-			<span class="txt-orange" style="padding-left: 24px;">Thesis</span>
-			<span class="txt-gray" style="margin: 0px 5px;"> • </span>
-			<span class="txt-blue">Computer Virus and its Behavior</span>
-		</div>
+		<app-education-info [data]="educationInfos"></app-education-info>
 	</div>
+
+
 	<app-section [title]="' -- End -- '"></app-section>
 	<span class="cursor">|</span>
 </div>

@@ -1,0 +1,29 @@
+<ng-container *ngFor="let educ of data;">
+	<div class="pure-g" style="margin-top: 16px;">
+			<span class="txt-gold">{{ educ.degree }}</span>
+			<span class="txt-gray pipe-spacer">|</span>
+			<span class="txt-purple">{{ educ.school}}</span>
+			<span class="txt-gray pipe-spacer">|</span>
+			<span class="txt-white">{{ educ.country}}</span>
+			<span class="txt-gray pipe-spacer">|</span>
+			<span>{{ educ.duration }}</span>
+	</div>
+	<ng-container *ngFor="let project of educ.projects;">
+		<div class="pure-g" style="margin-top: 12px;">
+			<div style="display: block; padding-left: 24px;">
+			<span class="txt-orange" style=>{{ project.type }}</span>
+			<span class="txt-gray pipe-spacer">•</span>
+			<span class="txt-blue">{{ project.title }}</span>
+			</div>
+		</div>
+		<div class="pure-g">
+			<ng-container *ngFor="let desc of project.descriptions;">
+				<div style="padding-top: 10px;">
+					<span class="txt-blue" style="padding-left: 24px; display: block;">
+						{{ desc }}
+					</span>
+				</div>
+			</ng-container>
+		</div>
+	</ng-container>
+</ng-container>

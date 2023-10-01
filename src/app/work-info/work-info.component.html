@@ -1,0 +1,23 @@
+<ng-container *ngFor="let info of data">
+	<div class="pure-g work-header">
+			<span class="txt-gold">{{ info.company }}</span>
+			<span class="txt-gray pipe-spacer">|</span>
+			<span class="txt-purple">{{ info.country }}</span>
+			<span class="txt-gray pipe-spacer">|</span>
+			<span>{{ info.duration }}</span>
+	</div>
+	<ng-container *ngFor="let position of info.positions">
+		<div class="pure-g">
+			<span class="txt-orange position">{{ position.title }}</span>
+		</div>
+		<div class="pure-g">
+			<div>
+				<ng-container *ngFor="let task of position.tasks">
+					<span class="txt-blue task">
+						{{ task }}
+					</span>
+				</ng-container>
+			</div>
+		</div>
+	</ng-container>
+</ng-container>
